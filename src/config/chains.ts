@@ -43,7 +43,36 @@ export const shibarium = defineChain({
     default: { name: "Explorer", url: "https://shibariumscan.io" },
   },
 });
+// Klaytn 铭文 klys  总量 2100万
 
+// 添加自定义链,链ID是 8217（三个框分别填写）:
+// Klaytn
+// https://public-en-cypress.klaytn.net
+// KLAY
+
+// data:,{"p":"krc-20","op":"mint","tick":"klys","amt":"10000"}
+
+export const Klay = defineChain({
+  id: 8217,
+  name: "Klaytn",
+  network: "Klaytn",
+  nativeCurrency: {
+    decimals: 18,
+    name: "KLAY",
+    symbol: "KLAY",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://public-en-cypress.klaytn.net"],
+    },
+    public: {
+      http: ["https://public-en-cypress.klaytn.net"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://shibariumscan.io" },
+  },
+});
 export const ethw = defineChain({
   id: 10001,
   name: "ETHW-mainnet",
@@ -68,6 +97,7 @@ export const ethw = defineChain({
 
 export const inscriptionChains = {
   eth: mainnet,
+  Klay,
   bsc,
   opBNB,
   okc,

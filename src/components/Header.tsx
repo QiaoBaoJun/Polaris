@@ -16,28 +16,19 @@ export default function Header() {
 
   const nav = [
     {
-      title: "Inscription",
+      title: "铭文",
       link: "/",
-    },
-    {
-      title: "Ierc Pow",
-      link: "/ierc",
     },
   ];
 
   return (
     <AppBar
       color="inherit"
-      className=" flex h-16 flex-row items-center justify-between px-10"
+      className=" flex h-12 flex-row items-center justify-between px-10"
     >
       <h1 className=" flex items-center gap-2 text-3xl font-bold">
-        <Image
-          src={logo}
-          alt="logo"
-          width={40}
-          height={40}
-        />
-        <Link href="/">Polaris</Link>
+       
+        <Link href="/"></Link>
       </h1>
 
       <div className=" flex h-full items-center gap-4 text-xl font-semibold">
