@@ -7,6 +7,8 @@ import {
   celo,
   classic,
   confluxESpace,
+  coreDao,
+  cronos,
   eos,
   fantom,
   filecoin,
@@ -95,12 +97,34 @@ export const ethw = defineChain({
   },
 });
 
+export const kcc = defineChain({
+  id: 321,
+  name: "KCC Mainnet",
+  network: "KCC Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "KCS",
+    symbol: "KCS",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://kcc-rpc.com"],
+    },
+    public: {
+      http: ["https://kcc-rpc.com"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://explorer.kcc.io/en" },
+  },
+});
+
 export const inscriptionChains = {
   eth: mainnet,
   Klay,
   bsc,
   opBNB,
-  okc,
+  // okc,
   polygon,
   fantom,
   avalanche,
@@ -109,6 +133,9 @@ export const inscriptionChains = {
   base,
   zkSync,
   classic,
+  cronos,
+  kcc,
+  coreDao,
   ethw,
   eos,
   neonMainnet,
